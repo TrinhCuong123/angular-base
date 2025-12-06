@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+$flex-derections: row, row-reverse, column, column-reverse;
+$justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly;
+$align-items: flex-start, flex-end, center, baseline, stretch;
+
+.d-flex {
+  display: flex;
+}
+.flex1 {
+  flex: 1;
+}
+
+@each $direction in $flex-derections {
+  .flex-#{$direction} {
+    flex-direction: $direction;
+  }
+}
+
+@each $justify in $justify-contents {
+  .justify-#{$justify} {
+    justify-content: $justify;
+  }
+}
+
+@each $align in $align-items {
+  .align-#{$align} {
+    align-items: $align;
+  }
+}
