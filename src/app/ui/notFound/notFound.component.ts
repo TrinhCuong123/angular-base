@@ -1,0 +1,9 @@
+import { Component } from "@angular/core";
+
+@Component({
+  selector: "app-notFound",
+  standalone: true,
+  templateUrl: "./notFound.component.html",
+  styleUrls: ["./notFound.component.scss"],
+})
+export class NotFoundComponent {}
