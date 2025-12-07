@@ -11,8 +11,6 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
   declarations: [
     AppComponent,
     HeroesComponent,
-    HeaderComponent,
-    SidebarComponent
   ],
   imports: [
     BrowserModule,

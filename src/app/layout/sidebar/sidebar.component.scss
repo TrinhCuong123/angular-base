@@ -1,5 +1,17 @@
 .app-sidebar {
   width: 233px;
   height: 100%;
-  background-color: rgb(165, 248, 64);
+}
+.image-bg {
+  background-image: url('../../../assets/icons/event-sidebar.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  height: 100%;
+
+}
+.expand-mode {
+  background-color: rgba(0, 0, 0, 0.6509803922);
+  height: 100%;
+  backdrop-filter: blur(14px);
 }

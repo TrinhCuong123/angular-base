@@ -1,13 +1,98 @@
-<div class="app-header d-flex align-center">
+<div class="app-header d-flex align-center justify-space-between">
   <div class="header-left d-flex align-center">
-    <div class="icon-link icon-switch"></div>
-    <div class="header-logo">
-      <div class="icon-event"></div>
-      <div class="icon-link icon-logo"></div>
+    <div class="header-left-action d-flex align-center">
+      <div class="icon-link icon-switch"></div>
+      <div class="header-logo">
+        <div class="icon-event"></div>
+        <div class="icon-link icon-logo"></div>
+      </div>
+      <div class="header-left-title">Tuyển dụng</div>
     </div>
-    <div class="header-left-title">Tuyển dụng</div>
+    <ms-input
+      label=""
+      placeholder="Nhập họ và tên"
+      [value]="fullName"
+      width="300px"
+      (valueChange)="fullName = $event"
+    ></ms-input>
   </div>
-  <div class="header-right">
-    <div class="app-logo"></div>
-  </div>
+  <div class="header-right d-flex align-center h-100-percent">
+      <div class="control-notifi btn-control mr-12px">
+        <div id="icon-notifi" class="icon-link mx-16 icon-notifi cursor-pointer"></div>
+        <dx-tooltip :hide-on-outside-click="false" target="#icon-notifi" show-event="mouseenter" hide-event="mouseleave">
+          Tính năng mới
+        </dx-tooltip>
+      </div>
+      <div class="control-cart btn-control mr-12px">
+        <div id="icon-cart" class="header-cart d-flex justify-center align-center">
+          <div class="icon-link mx-16 icon-cart cursor-pointer"></div>
+          <div class="cart-count d-flex justify-center align-center">
+            <div class="count">2</div>
+          </div>
+        </div>
+        <dx-tooltip :hide-on-outside-click="false" target="#icon-cart" show-event="mouseenter" hide-event="mouseleave">
+          Giỏ hàng
+        </dx-tooltip>
+      </div>
+      <div class="user-control-pannel d-flex align-center">
+        <div class="control-invite btn-control mr-12px">
+          <div id="icon-invite" class="icon-link mx-16 icon-invite cursor-pointer"></div>
+          <dx-tooltip :hide-on-outside-click="false" target="#icon-invite" show-event="mouseenter"
+            hide-event="mouseleave">
+            Mời bạn bè
+          </dx-tooltip>
+        </div>
+        <div class="control-message btn-control mr-12px">
+          <div id="icon-message" class="icon-link mx-16 icon-message cursor-pointer"></div>
+          <dx-tooltip :hide-on-outside-click="false" target="#icon-message" show-event="mouseenter"
+            hide-event="mouseleave">
+            Tin nhắn
+          </dx-tooltip>
+        </div>
+        <div class="control-ring btn-control mr-12px">
+          <div id="icon-ring" class="icon-link mx-16 icon-ring cursor-pointer"></div>
+          <dx-tooltip :hide-on-outside-click="false" target="#icon-ring" show-event="mouseenter"
+            hide-event="mouseleave btn-control">
+            Thông báo
+          </dx-tooltip>
+        </div>
+        <div class="control-help btn-control mr-12px">
+          <div id="icon-helpmenu" class="icon-link mx-16 icon-helpmenu cursor-pointer"></div>
+          <dx-tooltip :hide-on-outside-click="false" target="#icon-helpmenu" show-event="mouseenter"
+            hide-event="mouseleave">
+            Trợ giúp
+          </dx-tooltip>
+        </div>
+        <div class="control-more btn-control mr-12px">
+          <div id="icon-moremenu" class="icon-link mx-16 icon-moremenu cursor-pointer"></div>
+          <dx-tooltip :hide-on-outside-click="false" target="#icon-moremenu" show-event="mouseenter"
+            hide-event="mouseleave">
+            Tính năng khác
+          </dx-tooltip>
+        </div>
+        <div class="control-knowledge btn-control mr-12px">
+          <div id="icon-knowledge" class="icon-link mx-16 icon-knowledge cursor-pointer"></div>
+          <!-- <dx-tooltip :hide-on-outside-click="false" target="#icon-knowledge" show-event="mouseenter"
+            hide-event="mouseleave">
+            Kiến thức
+          </dx-tooltip> -->
+          <dx-tooltip
+            target="#icon-knowledge"
+            showEvent="dxhoverstart"
+            hideEvent="dxhoverend">
+            <div *dxTemplate="let data of 'content'">
+                <p>Kiến thức</p>
+            </div>
+        </dx-tooltip>
+        </div>
+        <div class="control-account mr-16px">
+          <div class="header-menu-account d-flex justify-center align-center">
+          <div class="icon-link mx-16 icon-avatar cursor-pointer"></div>
+          <div class="padge-count d-flex justify-center align-center">
+            <div class="count">2</div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
 </div>

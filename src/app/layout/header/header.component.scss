@@ -1,43 +1,133 @@
+/* ========== HEADER ========== */
 .app-header {
   height: 48px;
   background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
+
+/* ---------- LEFT ---------- */
 .header-left {
-  padding-left: 16px;
   height: 100%;
-  background-image: url("../../../assets/icons/navbar-bg-noel.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: left;
+  display: flex;
+  align-items: center;
 
-.header-logo {
-  position: relative;
-  height: 100%;
-  width: 103px;
-  padding: 0 16px;
+  .header-left-action {
+    display: flex;
+    align-items: center;
+    padding-left: 16px;
+    height: 100%;
+    background: url("../../../assets/icons/navbar-bg-noel.svg") no-repeat left / cover;
 
-  .icon-event {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 48px;
-    width: 103px; // nên set width để cover hoạt động đúng
-    background-image: url("../../../assets/icons/event-header.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-  }
+    .header-logo {
+      position: relative;
+      width: 103px;
+      height: 100%;
+      padding: 0 16px;
 
-  .icon-logo {
-    position: absolute;
-    margin: 5px 10px 0 18px;
-    z-index: 1;
+      .icon-event {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 103px;
+        height: 48px;
+        background: url("../../../assets/icons/event-header.svg") no-repeat center / cover;
+        z-index: 2;
+      }
+
+      .icon-logo {
+        position: absolute;
+        margin: 5px 10px 0 18px;
+        z-index: 1;
+      }
+    }
+
+    .header-left-title {
+      font-weight: 700;
+      font-size: 18px;
+      color: #1f1f1f;
+      margin: 0 24px 0 -12px;
+    }
   }
 }
 
-  .header-left-title {
-    font-weight: 700;
-    font-size: 18px;
-    color: #1f1f1f;
+/* ---------- RIGHT ---------- */
+.header-right {
+  display: flex;
+  align-items: center;
+
+  /* btn-control chung */
+  .btn-control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #212121;
+    transition: background 0.2s ease;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  /* Cart */
+  .header-cart {
+    position: relative;
+
+    .cart-count {
+      position: absolute;
+      top: -9px;
+      right: -7px;
+      width: 16px;
+      height: 16px;
+      background-color: #f5222d;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      text-align: center;
+
+      .count {
+        font-size: 10px;
+      }
+    }
+  }
+
+  /* Menu account */
+  .header-menu-account {
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #3b82f6 0deg,
+      #3b82f6 230deg,
+      #e63946 230deg,
+      #e63946 360deg
+    );
+
+    .icon-avatar {
+      border: 1px solid #fff;
+    }
+
+    .padge-count {
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      width: 16px;
+      height: 16px;
+      background-color: #f5222d;
+      color: #fff;
+      border-radius: 50%;
+      font-weight: 700;
+      text-align: center;
+
+      .count {
+        font-size: 10px;
+      }
+    }
   }
 }

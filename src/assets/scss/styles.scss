@@ -27,3 +27,12 @@ $align-items: flex-start, flex-end, center, baseline, stretch;
     align-items: $align;
   }
 }
+
+@for $i from 1 through 30 {
+  .mr-#{$i}px {
+    margin-right: #{$i}px;
+  }
+  .ml-#{$i}px {
+    margin-left: #{$i}px;
+  }
+}

@@ -1,0 +1,9 @@
+<div class="input-wrapper" [style.width]="width">
+  <label *ngIf="label">{{ label }}</label>
+  <input 
+    [placeholder]="placeholder"
+    [value]="value"
+    (input)="onInput($event)"
+    (focus)="onFocus()"
+  />
+</div>

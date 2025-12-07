@@ -34,6 +34,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/devextreme/dist/css/dx.light.css",
               "src/assets/scss//styles.scss",
               "src/assets/scss//reset.scss",
               "src/assets/scss/icon.scss"
