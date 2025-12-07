@@ -3,8 +3,8 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-recruitment',
   standalone: true,
-  templateUrl: './recruitment.component.html',
-  styleUrls: ['./recruitment.component.scss']
+  templateUrl: '../develop-page/develop-page.component.html',
+  styleUrls: ['../develop-page/develop-page.component.scss']
 })
 export class RecruitmentComponent {
 }

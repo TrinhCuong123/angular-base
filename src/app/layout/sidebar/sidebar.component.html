@@ -1,21 +1,23 @@
 <div class="app-sidebar expand-mode image-bg">
-  <div class="sidebar-content">
-    <div class="menu-item" *ngFor="let item of items">
-      <a
-        class="menu-link"
-        [routerLink]="item.url"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-      >
-        <div class="menu-content d-flex align-center justify-space-between">
-          <div class="conten-item d-flex">
-            <div class="icon icon-style" [ngClass]="item.icon"></div>
-            <div class="menu-title">{{ item.name }}</div>
+  <div class="sidebar-content d-flex flex-column justify-space-between">
+    <div class="content-main">
+      <div class="menu-item" *ngFor="let item of items">
+        <a
+          class="menu-link"
+          [routerLink]="item.url"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
+          <div class="menu-content d-flex align-center">
+            <div class="conten-item d-flex align-center">
+              <div class="icon icon-style" [ngClass]="item.icon"></div>
+              <div class="menu-title">{{ item.name }}</div>
+            </div>
           </div>
-        </div>
-      </a>
+        </a>
+      </div>
     </div>
-     <div class="back-button">
+    <div class="back-button">
       <div class="content-back d-flex align-center justify-center">
         <div class="icon icon-collapse"></div>
         <div class="title-button">Thu gọn</div>

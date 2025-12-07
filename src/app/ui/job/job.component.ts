@@ -5,8 +5,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-job',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: '../develop-page/develop-page.component.html',
-  styleUrls: ['../develop-page/develop-page.component.scss']
+  templateUrl: './job.component.html',
+  styleUrls: ['./job.component.scss']
 })
 export class JobComponent {
 

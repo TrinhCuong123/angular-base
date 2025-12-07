@@ -1,3 +1,14 @@
 .app-container {
   height: 100vh;
 }
+
+.main-content {
+  background-image: url('../../assets/icons/background_default1.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .content-wrapper {
+    padding: 24px;
+    height: 100%;
+  }
+}

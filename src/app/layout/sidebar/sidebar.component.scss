@@ -1,28 +1,81 @@
+/* Sidebar wrapper */
 .app-sidebar {
-  width: 233px;
+  min-width: 233px;
   height: 100%;
-}
-.image-bg {
-  background-image: url('../../../assets/icons/event-sidebar.svg');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: bottom;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
 
-}
-.expand-mode {
-  background-color: rgba(0, 0, 0, 0.6509803922);
-  height: 100%;
-  backdrop-filter: blur(14px);
-}
+  /* Background image */
+  &.image-bg {
+    background-image: url('../../../assets/icons/event-sidebar.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom;
+  }
 
+  /* Blur overlay */
+  &.expand-mode {
+    background-color: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(14px);
+  }
 
-.menu-link.active {
-  background-color: #eef6ff;
-  // border-left: 4px solid #3b82f6;
-  color: #2563eb;
+  /* Sidebar content */
+  .sidebar-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    padding: 32px 0 16px;
+  }
 
-  .menu-title {
-    font-weight: 600;
+  /* Menu area */
+  .content-main {
+    flex: 1; // giúp menu chiếm toàn bộ phần còn lại
+    overflow-y: auto;
+
+    .menu-item {
+      margin: 0 12px 12px;
+      padding: 8px 12px;
+      border-radius: 8px;
+
+      /* Active state using :has */
+      &:has(.menu-link.active) {
+        background-color: #2680eb;
+      }
+
+      &:has(.menu-link.active) .menu-title {
+        color: #fff !important;
+      }
+    }
+
+    .menu-link {
+      text-decoration: none;
+
+      .menu-title {
+        color: #C5CCD5;
+        font-size: 14px;
+        font-weight: 500;
+        margin-left: 12px;
+      }
+    }
+  }
+
+  /* Footer button */
+  .back-button {
+    padding: 0 10px;
+
+    .content-back {
+      padding: 8px;
+      background-color: rgba(126, 4, 4, 1);
+      height: 36px;
+      border-radius: 8px;
+      cursor: pointer;
+
+      .title-button {
+        color: hsla(0, 0%, 100%, 0.7);
+        font-weight: 400;
+        margin-left: 8px;
+      }
+    }
   }
 }

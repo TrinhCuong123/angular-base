@@ -1,0 +1,128 @@
+.job-container {
+  .ai-summary-container {
+    border-radius: 8px;
+    margin-bottom: 0;
+    gap: 12px;
+    padding: 16px;
+    height: 80px;
+    overflow: hidden;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.8) 24.04%,
+      rgba(228, 235, 253, 0.32) 100%
+    );
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/assets/icons/bg-1.png");
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: -2;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: url("/assets/icons/bg-2.png");
+      background-position: 50% 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      mix-blend-mode: overlay;
+      z-index: -1;
+    }
+  }
+
+  .ai-summary-left {
+    .summary-label {
+      font-weight: 500;
+      background: linear-gradient(90deg, #2243fe 0%, #45a5ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+
+      .icon-gemini {
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+        display: inline-block;
+        background-image: url("/assets/icons/icon-gemini.svg");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .summary-content {
+      font-size: 14px;
+      color: #1e2633;
+      font-weight: 400;
+      margin-top: 4px;
+    }
+  }
+  .ai-summary-center {
+    gap: 12px;
+
+    .ai-slide-item {
+      height: 48px;
+      width: 204px;
+      padding: 0 16px;
+      gap: 12px;
+      border-radius: 12px;
+      cursor: pointer;
+
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.7);
+
+      // ICON BASE
+      .ai-icon {
+        min-width: 23px;
+        width: 23px;
+        height: 23px;
+        background-image: url("../../../assets/icons/ai-feature-icon.svg");
+        background-repeat: no-repeat;
+      }
+
+      // override vị trí sprite
+      .icon-mailbox-ai {
+        @extend .ai-icon;
+        background-position: -1px -144px;
+      }
+
+      .icon-micro-ai {
+        @extend .ai-icon;
+        width: 20px; // override nếu khác icon-base
+        min-width: 20px;
+        background-position: -2px -96px;
+      }
+
+      .slide-text {
+        font-size: 14px;
+        font-weight: 400;
+        color: #1e2633;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        line-height: 1.2;
+        max-height: 2.4em;
+      }
+    }
+  }
+
+  .job-header {
+    /* Styles for job header section */
+  }
+
+  .job-content {
+    /* Styles for job content section */
+  }
+}
