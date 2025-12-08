@@ -20,4 +20,8 @@ export class ProductService {
     get() {
         return this.http.get<ProductEntity[]>(this.apiPath);
     }
+
+    getById(id: string | null = null) {
+        return this.http.get<ProductEntity>(`${this.apiPath}/${id}`);
+    }
 }

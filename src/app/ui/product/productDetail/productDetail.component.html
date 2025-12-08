@@ -1,2 +1,13 @@
-aaaaaaaaaa
-{{activatedRoute.params}}
+<div class="detail-container">
+  <div class="btn-back" (click)="backToList()">Quay lại</div>
+  <div class="detail-main d-flex">
+    <div class="detail-image">
+      <img [src]="product?.image" alt="">
+    </div>
+    <div class="detail-info">
+      <div class="detail-title">{{ product?.title }}</div>
+      <div class="detail-price">$ {{ product?.price }}</div>
+      <div class="detail-description">{{ product?.description }}</div>
+    </div>
+  </div>
+</div>
