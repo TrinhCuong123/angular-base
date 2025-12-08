@@ -22,6 +22,7 @@ export class SidebarComponent {
     { name: 'Trao đổi với ứng viên', url: '/candidate-conversation', icon: 'icon-config'},
     { name: 'Báo cáo', url: '/report', icon: 'icon-reports'},
     { name: 'Thiết lập', url: '/setting', icon: 'icon-config'},
+    { name: 'Sản phẩm', url: '/product', icon: 'icon-config'}
   ];
 
 }

@@ -1,0 +1,12 @@
+<div *ngIf="!isLoading; else loading"class="product-container d-flex">
+    <div class="product-items d-flex flex-column align-center justify-center" *ngFor="let product of products">
+        <img class="product-image" [src]="product.image" alt="">
+        <div class="product-title">{{ product.title }}</div>
+        <div class="product-price"> ${{ product.price }} </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="loading-container">
+        <span class="loader"></span>
+    </div>
+</ng-template>

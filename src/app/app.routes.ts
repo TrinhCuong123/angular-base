@@ -62,6 +62,20 @@ export const appRoutes: Routes = [
       import('./ui/setting/setting.component')
         .then(m => m.SettingComponent)
   },
+  {
+    path: 'product',
+    loadComponent: () =>
+      import('./ui/product/product.component')
+        .then(m => m.ProductComponent)
+  },
+
+  {
+    path: 'product/:id',
+    loadComponent: () =>
+      import('./ui/product/productDetail/productDetail.component')
+        .then(m => m.ProductDetailComponent)
+  },
+
 
   { path: '', redirectTo: 'job', pathMatch: 'full' },
 
