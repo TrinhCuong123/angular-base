@@ -3,6 +3,7 @@ import { AsyncPipe, CommonModule, JsonPipe } from '@angular/common';
 import { ProductService } from 'src/app/services/product.service';
 import { ProductEntity } from 'src/app/shared/entities/product.entities';
 import { toSignal } from '@angular/core/rxjs-interop'
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-productDetail',
@@ -12,17 +13,9 @@ import { toSignal } from '@angular/core/rxjs-interop'
   styleUrls: ['./productDetail.component.scss']
 })
 export class ProductDetailComponent {
-  private readonly productService = inject(ProductService);
-  isLoading: boolean = true
-  // products_ = toSignal(this.productService.get());
-  // products$ = this.productService.get();
-  products!: ProductEntity[];
-  ngOnInit() {
-    this.productService.get().subscribe(res => {
-      this.isLoading = true
-      this.products = res;
-      this.isLoading = false
-    })
+  activatedRoute = inject(ActivatedRoute);
+  userId?: string;
+  constructor() {
+    console.log(this.activatedRoute);
   }
-  
 }
