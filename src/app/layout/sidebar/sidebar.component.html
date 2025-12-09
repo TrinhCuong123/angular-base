@@ -1,7 +1,7 @@
 <div class="app-sidebar expand-mode image-bg">
   <div class="sidebar-content d-flex flex-column justify-space-between">
     <div class="content-main">
-      <div class="menu-item" *ngFor="let item of items">
+      <div class="menu-item" *ngFor="let item of intersection">
         <a
           class="menu-link"
           [routerLink]="item.url"
@@ -23,5 +23,7 @@
         <div class="title-button">Thu gọn</div>
       </div>
     </div>
+
   </div>
+  
 </div>

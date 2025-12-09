@@ -1,7 +1,18 @@
+<div class="input-search">
+    <ms-input
+    label=""
+    placeholder="Tìm kiếm"
+    [value]="search"
+    width="300px"
+    (valueChange)="onValueChange($event)"
+    class="product-search"
+/>
+</div>
+
 <div *ngIf="!isLoading; else loading"class="product-container d-flex justify-space-around">
-    <div class="product-items d-flex flex-column align-center justify-center" *ngFor="let product of products" (click) = "handleClickProduct(product.id)">
+    <div class="product-items d-flex flex-column align-center justify-center" *ngFor="let product of productsSearch" (click) = "handleClickProduct(product.id)">
         <img class="product-image" [src]="product.image" alt="">
-        <div class="product-title">{{ product.title }}</div>
+        <div class="product-title" HighLightText [searchValue]="search">{{ product.title }}</div>
         <div class="product-price"> ${{ product.price }} </div>
     </div>
 </div>

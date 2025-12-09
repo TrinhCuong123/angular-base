@@ -31,3 +31,13 @@
     margin-top: 4px;
   }
 }
+
+
+input:focus {
+  background-color: rgb(191, 228, 213);
+}
+
+input:focus-visible {
+  border: none;
+  outline: unset;
+}

@@ -25,4 +25,5 @@ export class MsInputComponent {
   onFocus() {
     this.focusInput.emit();
   }
+
 }

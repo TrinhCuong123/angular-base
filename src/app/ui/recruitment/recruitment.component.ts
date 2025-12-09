@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
+import { PermissionDirection } from 'src/app/directive/permission.directive';
 
 @Component({
   selector: 'app-recruitment',
   standalone: true,
-  templateUrl: '../develop-page/develop-page.component.html',
-  styleUrls: ['../develop-page/develop-page.component.scss']
+  templateUrl: './recruitment.component.html',
+  styleUrls: ['./recruitment.component.scss'],
+  imports: [PermissionDirection]
 })
 export class RecruitmentComponent {
 }

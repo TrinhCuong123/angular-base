@@ -1,0 +1,23 @@
+.content {
+  background-color: #fff;
+}
+.content-description .description-title {
+  font-size: 20px;
+  margin: 12px 0 0;
+}
+.content-description .description-content {
+  margin: 8px 0 0;
+}
+.content-description .description-btn-back {
+  background-color: #34b057;
+  color: #fff;
+  height: 36px;
+  margin: 16px 0 0;
+  padding: 0 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.content-description .description-btn-back:hover {
+  background-color: #02b936;
+}

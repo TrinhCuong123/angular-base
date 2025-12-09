@@ -1,12 +1,14 @@
  
 import { Routes } from '@angular/router';
+import { AuthGuard } from './auth/auth.guard';
  
 export const appRoutes: Routes = [
   {
     path: 'job',
     loadComponent: () =>
       import('./ui/job/job.component')
-        .then(m => m.JobComponent)
+        .then(m => m.JobComponent),
+    canActivate: [AuthGuard]
   },
   {
     path: 'recruitment',
@@ -66,7 +68,8 @@ export const appRoutes: Routes = [
     path: 'product',
     loadComponent: () =>
       import('./ui/product/product.component')
-        .then(m => m.ProductComponent)
+        .then(m => m.ProductComponent),
+    canActivateChild: [AuthGuard]
   },
 
   {
@@ -79,6 +82,12 @@ export const appRoutes: Routes = [
 
   { path: '', redirectTo: 'job', pathMatch: 'full' },
 
+  {
+    path: '403',
+    loadComponent: () =>
+      import('./ui/403/403.component')
+        .then(m => m.NotAllowedComponent)
+  },
   {
     path: '**',
     loadComponent: () =>

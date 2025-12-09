@@ -3,6 +3,10 @@ $flex-derections: row, row-reverse, column, column-reverse;
 $justify-contents: flex-start, flex-end, center, space-between, space-around, space-evenly;
 $align-items: flex-start, flex-end, center, baseline, stretch;
 
+.h-100-percent {
+  height: 100%;
+}
+
 .d-flex {
   display: flex;
 }
