@@ -326,7 +326,23 @@ export const permissions = [
     {
         "SubSystemCode": "Recruitment",
         "Permissions": [
-            "",
+            "View",
+            "Edit",
+            "Add",
+            "SendOffer",
+            "Share",
+            "Delete",
+            "ExportCandidate",
+            "Access",
+            "AddCandidate",
+            "ExportRecruitment",
+            "PinRecruitment"
+        ]
+    },
+    {
+        "SubSystemCode": "Product",
+        "Permissions": [
+            "View",
             "Edit",
             "Add",
             "SendOffer",

@@ -1,0 +1,43 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 14px;
+    margin-bottom: 4px;
+    font-weight: 600;
+  }
+
+  input {
+    height: 36px;
+    padding: 6px 10px;
+    border: 1px solid #dcdcdc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color .2s;
+
+    &:focus {
+      border-color: #1a73e8;
+    }
+  }
+
+  .error-border {
+    border-color: #e53935 !important;
+  }
+
+  .error-text {
+    color: #e53935;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+}
+
+
+input:focus {
+  background-color: rgb(191, 228, 213);
+}
+
+input:focus-visible {
+  border: none;
+  outline: unset;
+}

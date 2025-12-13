@@ -23,7 +23,7 @@ export class SidebarComponent implements OnInit {
     { SubSystemCode: 'Conversation',name: 'Trao đổi với ứng viên', url: '/candidate-conversation', icon: 'icon-config'},
     { SubSystemCode: 'Report',name: 'Báo cáo', url: '/report', icon: 'icon-reports'},
     { SubSystemCode: '',name: 'Thiết lập', url: '/setting', icon: 'icon-config'},
-    { SubSystemCode: '',name: 'Sản phẩm', url: '/product', icon: 'icon-config'}
+    { SubSystemCode: 'Product',name: 'Sản phẩm', url: '/product', icon: 'icon-config'}
   ];
   intersection: any[] = [];
   ngOnInit() {

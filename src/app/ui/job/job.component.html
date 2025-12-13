@@ -22,9 +22,28 @@
       </div>
     </div>
     <div class="ai-summary-right">
-
     </div>
   </div>
-  <div class="job-header"></div>
-  <div class="job-content"></div>
+  <div class="job-header d-flex justify-space-between align-center">
+    <div class="header-left">
+      Tin tuyển dụng
+    </div>
+    <div class="header-right">
+      Thêm mới
+    </div>
+  </div>
+  <div class="job-content">
+    <ms-context-menu
+      [dataSource]="itemsMenu"
+      [(value)]="selectedMenuId">
+    </ms-context-menu>
+
+    <dx-list [dataSource]="products" height="100%" displayExpr="Name">
+      <div *dxTemplate="let item of 'item'">
+        <div class="product">
+          <div>{{ item.Title }}</div>
+        </div>
+      </div>
+    </dx-list>
+  </div>
 </div>

@@ -1,0 +1,20 @@
+<div id="image" alt="product">{{value}}</div>
+<dx-context-menu
+  target="#image"
+  showEvent="dxclick"
+  [dataSource]="dataSource"
+  [position]="{
+    my: 'left top',
+    at: 'left bottom',
+    of: '#image'
+  }"
+  (onItemClick)="onSelectItem($event)"
+>
+  <div *dxTemplate="let item of 'item'">
+    <div class="menu-item">
+      <span>{{ item.text }}</span>
+
+      <i class="dx-icon dx-icon-check" *ngIf="item.id === value"></i>
+    </div>
+  </div>
+</dx-context-menu>
